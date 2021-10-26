@@ -1,12 +1,15 @@
 Package: TwoPhaseAccuracy
 Type: Package
-Title: What the Package Does (Title Case)
+Title: Two-phase stratified sampling and analysis for predicting binary outcomes
 Version: 0.1.0
-Author: Who wrote it
-Maintainer: The package maintainer <yourself@somewhere.net>
-Description: More about what it does (maybe more than one line)
-    Use four spaces when indenting paragraphs within the Description.
-License: What license is it under?
+Author: Yaqi Cao, Sebastien Haneuse, Yingye Zheng, Jinbo Chen
+Maintainer: Yaqi Cao <Yaqi.Cao@pennmedicine.upenn.edu>
+Description: In this package, function "evalTwoPhase" is for calculating AUC, TPR and FPR with two-phase estimators implemented via function tps() in R package "osDesign" (Haneuse and others, 2011)
+Function "seTwoPhase" is for estimating the corresponding standard errors using bootstrap resampling.
+The input arguments of the two functions include threshold values for estimating TPR and FPR and a dataframe that contains case-control status, stratum membership, Phase I predictors, Phase II predictors, variable names and a variable indicating whether a subject was selected into Phase II.
+Function "seTwoPhase" includes an additional input argument for the number of bootstrap samples.
+A third function, "summaryTwoPhase" summarizes the results from "evalTwoPhase and "seTwoPhase by outputing the estimates of AUC, TPR, and FPR together with their standard drror estimates.
+License: GPL (>=3)
 Encoding: UTF-8
 LazyData: true
 RoxygenNote: 7.1.2
