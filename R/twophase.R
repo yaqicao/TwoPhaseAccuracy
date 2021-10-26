@@ -61,6 +61,7 @@
 #' @import progress
 #' @import plyr
 #' @import MESS
+#' @param q threshold value for TPR(q)
 #' @examples
 #'
 #' library(package1014)
@@ -92,19 +93,12 @@ evalTwoPhase <- function(Outcome, X, Z, Stratum, Phase_ID, namesX, namesZ, q, p,
 #' seTwoPhase functions
 #'
 #' @return 3 numbers
-#' @export
-#' @import boot
-#' @import mvtnorm
-#' @import osDesign
-#' @import progress
-#' @import plyr
-#' @import MESS
 #' @examples
 #'
 #' library(package1014)
 #' library(mvtnorm)
 #' set.seed(2016311033)
-#'
+#' @export
 #'
 seTwoPhase <- function(Outcome, X, Z, Stratum, Phase_ID, namesX, namesZ, q, p, numBoot, method){
 
