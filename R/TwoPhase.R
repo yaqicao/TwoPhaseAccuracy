@@ -55,7 +55,6 @@
 #' @import plyr
 #' @import MESS
 #' @examples
-#'
 #' library(package1014)
 #' library(mvtnorm)
 #' set.seed(2016311033)
