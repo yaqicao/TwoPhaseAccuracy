@@ -54,10 +54,12 @@
 #' @import progress
 #' @import plyr
 #' @import MESS
-#' @examples
-#' library(package1014)
-#' library(mvtnorm)
-#' set.seed(2016311033)
+#' @example 
+
+est_benchmark <- evalTwoPhase(Outcome, X, Z, Stratum, Phase_ID, namesX, namesZ, q=0.2, p=0.2, method="Benchmark")
+se_benchmark <- seTwoPhase(Outcome, X, Z, Stratum, Phase_ID, namesX, namesZ, q=0.2, p=0.2, numBoot=30, method="Benchmark")
+summaryTwoPhase(est_benchmark, se_benchmark, q=0.2, p=0.2, method="Benchmark")
+
 #'
 #'
 #'
